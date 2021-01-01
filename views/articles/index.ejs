@@ -1,0 +1,17 @@
+<%- include("../head.ejs") %>
+<div class="container">
+    <h1 class="mb-2">Blog</h1>
+
+    <% articles.forEach( article => { %>
+    <div class="item-info mt-4 col-12">
+        <h3><%= article.title %></h3>
+        <p class="createdAt text-muted">
+            <%= article.createdAt.toLocaleString("ru-RU", {dateStyle:"short", timeStyle: "short"}) %> UTC</p>
+        <p class="description"><%= article.description %></p>
+        <hr>
+        <a href="/articles/<%= article.slug %>">Read More</a>
+    </div>
+    <% }) %>
+
+</div>
+<%- include("../foot.ejs") %>

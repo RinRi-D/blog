@@ -1,0 +1,14 @@
+<%- include("../head.ejs") %>
+<div class="container">
+    <h1 class="mb-1"><%= article.title %></h1>
+    <div class="text-muted mb-3">
+        <%= article.createdAt.toLocaleString("ru-RU", {dateStyle:"short", timeStyle: "short"}) %> UTC
+    </div>
+    <div id="out">
+        <%- article.sanitizedHtml %>
+    </div>
+    <script data-isso="https://comments.rinri-d.xyz/" src="https://comments.rinri-d.xyz/js/embed.min.js"></script>
+
+    <section id="isso-thread"></section>
+</div>
+<%- include("../foot.ejs") %>

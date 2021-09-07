@@ -3,7 +3,7 @@
     <h1 class="mb-2">Blog</h1>
 
     <% articles.forEach( article => { %>
-    <div class="item-info mt-4 col-12">
+    <div class="item-info">
         <h3><%= article.title %></h3>
         <p class="createdAt text-muted">
             <%= article.createdAt.toLocaleString("ru-RU", {dateStyle:"short", timeStyle: "short"}) %> UTC</p>
